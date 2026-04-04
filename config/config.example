@@ -1,0 +1,81 @@
+# Pi-Star Maintenance Toolkit - Example Configuration
+# Copy this to /etc/pistar-maint.conf (or similar) and adjust values.
+# Then source it from your scripts if you want to externalise config.
+
+###############################################################################
+# GENERAL
+###############################################################################
+
+# Directory for local backups
+BACKUP_DIR="/home/pi/pistar-backups"
+
+# Directory for restore temp + rollback
+RESTORE_DIR="/home/pi/pistar-restore"
+ROLLBACK_DIR="/home/pi/pistar-rollback"
+
+# Log files
+MAINT_LOGFILE="/var/log/pistar-update.log"
+RESTORE_LOGFILE="/var/log/pistar-restore.log"
+
+# Machine identifier (defaults to hostname if empty)
+MACHINE_ID_OVERRIDE=""
+
+###############################################################################
+# CLOUD PROVIDERS
+###############################################################################
+
+# Enable/disable providers (0 = off, 1 = on)
+ENABLE_S3=0
+ENABLE_B2=0
+ENABLE_ONEDRIVE=1
+
+# If set to 1, any cloud upload failure is treated as fatal
+CLOUD_FATAL=0
+
+# S3
+S3_BUCKET="YOUR_S3_BUCKET_NAME"
+S3_BASE_PATH="pi-star"
+
+# Backblaze B2
+B2_BUCKET="YOUR_B2_BUCKET_NAME"
+B2_BASE_PATH="pi-star"
+
+# OneDrive via rclone
+# This is the rclone remote + base path, e.g. "onedrive:/PiStar-Backups"
+ONEDRIVE_BASE="onedrive:/PiStar-Backups"
+
+###############################################################################
+# RETENTION
+###############################################################################
+
+# Local: keep last N backups per machine
+LOCAL_RETENTION_COUNT=10
+
+# OneDrive: delete backups older than N days (0 = disabled)
+ONEDRIVE_RETENTION_DAYS=30
+
+###############################################################################
+# EMAIL NOTIFICATIONS
+###############################################################################
+
+ENABLE_EMAIL=0
+EMAIL_TO="you@example.com"
+EMAIL_FROM="pistar@example.com"
+EMAIL_SUBJECT_PREFIX="[Pi-Star Maintenance]"
+
+###############################################################################
+# SELF-UPDATE
+###############################################################################
+
+ENABLE_SELF_UPDATE=1
+# Raw URL to pistar-maint.sh in your GitHub repo
+SCRIPT_URL="https://raw.githubusercontent.com/Anubis161Killer/pistar-maintenance/main/scripts/pistar-maint.sh"
+
+###############################################################################
+# FLEET / IDENTIFICATION
+###############################################################################
+
+# Optional: static fleet ID (e.g. callsign, site code)
+FLEET_ID=""
+# Optional: site/location label
+FLEET_SITE=""
