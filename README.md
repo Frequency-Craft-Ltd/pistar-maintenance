@@ -28,6 +28,6 @@ On Pi-Star:
 
 ```bash
 sudo mkdir -p /usr/local/bin
-sudo curl -fsSL https://raw.githubusercontent.com/Anubis161Killer/pistar-maintenance/main/scripts/pistar-maint.sh -o /usr/local/bin/pistar-maint.sh
-sudo curl -fsSL https://raw.githubusercontent.com/Anubis161Killer/pistar-maintenance/main/scripts/pistar-restore.sh -o /usr/local/bin/pistar-restore.sh
+sudo curl -fsSL https://raw.githubusercontent.com/Frequency-Craft-Ltd/pistar-maintenance/main/scripts/pistar-maint.sh -o /usr/local/bin/pistar-maint.sh
+sudo curl -fsSL https://raw.githubusercontent.com/Frequency-Craft-Ltd/pistar-maintenance/main/scripts/pistar-restore.sh -o /usr/local/bin/pistar-restore.sh
 sudo chmod +x /usr/local/bin/pistar-*.sh
