@@ -51,7 +51,7 @@ EMAIL_SUBJECT_PREFIX="[Pi-Star Maintenance]"
 
 ENABLE_SELF_UPDATE=1
 SCRIPT_PATH="$(readlink -f "$0")"
-SCRIPT_URL="https://raw.githubusercontent.com/Anubis161Killer/pistar-maintenance/main/scripts/pistar-maint.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/Frequency-Craft-Ltd/pistar-maintenance/main/scripts/pistar-maint.sh"
 
 DRYRUN=0
 for arg in "$@"; do
